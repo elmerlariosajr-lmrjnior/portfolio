@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elmer Lariosa - Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">ElmerLariosa</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Hero Section -->
+<section class="hero" aria-labelledby="intro-title">
+  <div class="container grid hero-grid">
+    <div class="hero-text">
+      <h1 id="intro-title">Hi, I'm <span class="highlight">Elmer Lariosa</span></h1>
+      <p class="lead">A Web Developer passionate about crafting responsive and engaging web experiences.</p>
+      <div class="button-group">
+        <a href="#projects" class="btn">
+          <i class="fas fa-laptop-code"></i> See my work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact me
+        </a>
+      </div>
+    </div>
+    <figure class="profile">
+      <img src="elmer.jpg" alt="Portrait of Elmer Lariosa" />
+      <figcaption><i class="fas fa-map-marker-alt"></i> Based in Butuan City, PH</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" aria-labelledby="about-title">
+  <div class="container about-text">
+    <h2 id="about-title">About Me</h2>
+    <p>
+      I’m a passionate <strong>Web Developer</strong> who enjoys building 
+      responsive and user-friendly websites. My focus is on writing clean 
+      <strong>HTML</strong>, styling with <strong>CSS</strong>, and adding 
+      interactivity with <strong>JavaScript</strong>.
+    </p>
+    <p>
+      I love transforming ideas into interactive experiences and I’m 
+      constantly exploring new tools and techniques to improve my craft.
+    </p>
+    <div class="about-links">
+      <a href="https://github.com/elmerlariosajr-lmrjnior" 
+         target="_blank" rel="noopener" class="btn">
+        <i class="fab fa-github"></i> Visit My GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="project1.jpg" alt="Portfolio Website" />
+            <div class="card-badge">
+              <h3>Portfolio Website</h3>
+              <p>A responsive personal site showcasing my projects, skills, and background with a clean design.</p>
+              <a href="#" class="btn btn-outline">View Project</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="project2.jpg" alt="To-Do List App" />
+            <div class="card-badge">
+              <h3>To-Do List App</h3>
+              <p>A functional web app for managing daily tasks, built with HTML, CSS, and JavaScript.</p>
+              <a href="#" class="btn btn-outline">View Project</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="project3.jpg" alt="Landing Page Design" />
+            <div class="card-badge">
+              <h3>Landing Page Design</h3>
+              <p>A modern landing page with a structured layout and mobile-friendly design.</p>
+              <a href="#" class="btn btn-outline">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <ul class="chips">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>Git & GitHub</li>
+          <li>Accessibility</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <address>
+          Email: <a href="mailto:elmerlariosajr@gmail.com">elmerlariosajr@gmail.com</a><br />
+          GitHub: <a href="https://github.com/elmerlariosajr-lmrjnior">github.com/elmerlariosajr-lmrjnior</a><br />
+          Location: Butuan City, Philippines
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <span id="year">2025</span> © Elmer Lariosa · Built with HTML & CSS
+    </p>
+  </footer>
+
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
