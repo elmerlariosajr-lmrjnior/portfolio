@@ -52,6 +52,7 @@
 <section id="about" aria-labelledby="about-title">
   <div class="container about-text">
     <h2 id="about-title">About Me</h2>
+    <p class="subtitle">Who I Am</p>
     <p>
       I’m a passionate <strong>Web Developer</strong> who enjoys building 
       responsive and user-friendly websites. My focus is on writing clean 
@@ -62,6 +63,11 @@
       I love transforming ideas into interactive experiences and I’m 
       constantly exploring new tools and techniques to improve my craft.
     </p>
+    <div class="about-highlights">
+      <div><i class="fas fa-code"></i> Clean, semantic code</div>
+      <div><i class="fas fa-mobile-alt"></i> Responsive design</div>
+      <div><i class="fas fa-lightbulb"></i> Creative problem-solving</div>
+    </div>
     <div class="about-links">
       <a href="https://github.com/elmerlariosajr-lmrjnior" 
          target="_blank" rel="noopener" class="btn">
@@ -79,29 +85,29 @@
         <h2 id="projects-title">Projects</h2>
         <div class="cards">
           <article class="card">
-            <img src="project1.jpg" alt="Portfolio Website" />
+            <img src="PortfolioWebsite.jpg" alt="Portfolio Website" />
             <div class="card-badge">
               <h3>Portfolio Website</h3>
               <p>A responsive personal site showcasing my projects, skills, and background with a clean design.</p>
-              <a href="#" class="btn btn-outline">View Project</a>
+              <a href="PortfolioWebsite.jpg" target="_blank" class="btn btn-outline">View Project</a>
             </div>
           </article>
 
           <article class="card">
-            <img src="project2.jpg" alt="To-Do List App" />
+            <img src="BCESForm137.jpg" alt="BCES Form 137" />
             <div class="card-badge">
-              <h3>To-Do List App</h3>
-              <p>A functional web app for managing daily tasks, built with HTML, CSS, and JavaScript.</p>
-              <a href="#" class="btn btn-outline">View Project</a>
+              <h3>BCES Form 137</h3>
+              <p>Website for managing Form 137 records with HTML, CSS, and dynamic forms.</p>
+              <a href="BCESForm137.jpg" target="_blank" class="btn btn-outline">View Project</a>
             </div>
           </article>
 
           <article class="card">
-            <img src="project3.jpg" alt="Landing Page Design" />
+            <img src="RestaurantWebsite.jpg" alt="Restaurant Website" />
             <div class="card-badge">
-              <h3>Landing Page Design</h3>
-              <p>A modern landing page with a structured layout and mobile-friendly design.</p>
-              <a href="#" class="btn btn-outline">View Project</a>
+              <h3>Restaurant Website</h3>
+              <p>A responsive restaurant website with menu display and online table booking.</p>
+              <a href="RestaurantWebsite.jpg" target="_blank" class="btn btn-outline">View Project</a>
             </div>
           </article>
         </div>
@@ -109,33 +115,39 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title">Skills</h2>
-        <ul class="chips">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>Responsive Design</li>
-          <li>Git & GitHub</li>
-          <li>Accessibility</li>
-          <li>Problem Solving</li>
-        </ul>
+    <section id="skills" aria-labelledby="section-title">
+    <h2 id="skills-title" class="section-title">Skills</h2>
+      <div class="skills">
+         <span class="skill-tag">💻 HTML5</span>
+         <span class="skill-tag">🎨 CSS3</span>
+         <span class="skill-tag">⚡ JavaScript</span>
+         <span class="skill-tag">📱 Responsive Design</span>
+         <span class="skill-tag">🔧 Git & GitHub</span>
+         <span class="skill-tag">♿ Accessibility</span>
+         <span class="skill-tag">🧩 Problem Solving</span>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Contact</h2>
-        <address>
-          Email: <a href="mailto:elmerlariosajr@gmail.com">elmerlariosajr@gmail.com</a><br />
-          GitHub: <a href="https://github.com/elmerlariosajr-lmrjnior">github.com/elmerlariosajr-lmrjnior</a><br />
-          Location: Butuan City, Philippines
-        </address>
-      </div>
-    </section>
-  </main>
+ <!-- Contact Section -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="container contact">
+    <h2 id="contact-title" class="section-title">Contact</h2>
+    <div class="contact-info">
+      <p class="contact-item">
+        📧 <a href="mailto:elmerlariosajr@gmail.com">elmerlariosajr@gmail.com</a>
+      </p>
+      <p class="contact-item">
+        🐙 <a href="https://github.com/elmerlariosajr-lmrjnior" target="_blank">
+          github.com/elmerlariosajr-lmrjnior
+        </a>
+      </p>
+      <p class="contact-item">
+        📍 Butuan City, Philippines
+      </p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -148,5 +160,38 @@
     // Auto-update year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <!-- Theme Toggle + Edit Button -->
+<div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px;">
+  <button id="theme-toggle" class="btn">🌙 Toggle Theme</button>
+  <button id="edit-about" class="btn btn-outline">✏️ Edit About</button>
+</div>
+
+<script>
+  // ========================
+  // 1. Dark/Light Theme Toggle
+  // ========================
+  const toggleBtn = document.getElementById("theme-toggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggleBtn.textContent = 
+      document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+
+  // ========================
+  // 2. Editable "About" Section
+  // ========================
+  const editBtn = document.getElementById("edit-about");
+  const aboutSection = document.querySelector("#about .about-text");
+
+  editBtn.addEventListener("click", () => {
+    const isEditable = aboutSection.contentEditable === "true";
+    aboutSection.contentEditable = !isEditable; // toggle editable state
+    editBtn.textContent = isEditable ? "✏️ Edit About" : "💾 Save";
+    aboutSection.style.border = isEditable ? "none" : "2px dashed #660000";
+    aboutSection.focus();
+  });
+</script>
+
 </body>
 </html>
